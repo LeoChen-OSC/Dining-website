@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    /*remove default margin and padding for all elements in this document*/
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+.header{
+    background-color: darkred;
+    color: white;
+    padding: 40px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*styles the element with class "header" with a black background, white text, and padding*/
+}
+.header .header-list li{
+    display:inline-block;
+    list-style: none;
+    margin: 10px;
+}
+.header .header-list li button{
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius:5px ;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+
+
+}
+.header .header-list li button:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+    /*styles the button elements within the list items of the element with class "header" on hover*/
+}
+.link-header{
+    background-color: black;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /*styles the element with class "link-header" with a black background, white text, and padding*/
+}
+.link-header a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    /*styles the anchor tags within the element with class "link-header"*/
+}
+.link-header button{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+
+    /*styles the anchor tags within the element with class "link-header"*/
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    /*styles the element with class "dropdown" to be positioned relative and displayed as an inline-block*/
+}
+.toggle-menu{
+    background-color: transparent;
+    color: white;
+
+    border: none;
+    cursor: pointer;
+    /*styles the button with class "toggle-menu"*/
+}
+.menu-content{
+    display: none;
+    min-width: 130px;
+    /*sets the min width to 80px*/
+    position: absolute;
+    /*positions the element with class "menu-content" absolutely and hides it by default*/
+    padding: 10px;
+    overflow: auto;
+    /*hides the element with class "menu-content" by default*/
+    translate: -20px 10px;
+
+}
+
+.menu-content a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    /*styles the anchor tags within the element with class "menu-content"*/
+} 
+.show{
+    display: block;
+    background-color: gray;
+    /*makes the element with class "show" visible*/
+}
+@media (prefers-color-scheme:dark) {
+    body{
+        background-color: black;
+        color: white;
+    }
+    .link-header{
+        background-color: gray;
+    }
+    .menu-content a{
+        color: white;
+    }
+}
+@media (prefers-color-scheme:light) {
+    /*detects if the device is set to light mode*/
+    body{
+        background-color: white;
+        color: black;
+    }
+    .link-header{
+        background-color: gray;
+    }
+    .menu-content a{
+        color: black;
+    }
+}
