@@ -7,6 +7,13 @@
 
 
 }
+.main-head{
+    position:sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /*sets the header as sticky, it will stick o the top when scrolling*/
+}
 .header{
     background-color: darkred;
     color: white;
@@ -76,7 +83,7 @@
 }
 .menu-content{
     display: none;
-    min-width: 130px;
+    min-width: 100px;
     /*sets the min width to 80px*/
     position: absolute;
     /*positions the element with class "menu-content" absolutely and hides it by default*/
@@ -99,7 +106,62 @@
     background-color: gray;
     /*makes the element with class "show" visible*/
 }
+
+
+.footer p{
+    position: fixed;
+    /*positions the footer at the bottom of the page*/
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+
+}
+.login-ui{
+    width:80%;
+    margin: 50px auto;
+    background-color:maroon ;
+    display: flex;
+    flex-direction: column;
+    /*styles the flexbox elements to a column format*/
+    align-items: center;
+    padding: 30px 0px;
+    border-radius: 10px;
+     /*styles the element */
+
+    
+}
+.login-ui label{
+    color: white;
+    font-weight: bold;
+    
+}
+.login-ui input{
+    margin: 20px;
+    padding: 10px;
+    width:60%;
+    height:30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-ui input[type="submit"]{
+    background-color: white;
+    color: black;
+    max-width: 100px;
+    height: 40px;;
+    font-weight: bold;
+    cursor: pointer;
+    /*changes the pointer style upon hovering over the element*/
+}
+.login-ui input[type="submit"]:hover{
+    background-color: gray;
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    /*creates a transiton effect when hovering over the submit button*/
+}
 @media (prefers-color-scheme:dark) {
+    /*detects if the device is set to dark mode*/
     body{
         background-color: black;
         color: white;
@@ -110,6 +172,9 @@
     .menu-content a{
         color: white;
     }
+    .login-ui{
+        border: 5px solid white;
+    }
 }
 @media (prefers-color-scheme:light) {
     /*detects if the device is set to light mode*/
@@ -118,9 +183,38 @@
         color: black;
     }
     .link-header{
-        background-color: gray;
+        background-color: rgb(82, 82, 82);
     }
     .menu-content a{
         color: black;
+    }
+
+}
+@media (max-width:480px){
+    /*media query for devices lower than 480px*/
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header button{
+        padding: 5px;
+    }
+    .link-header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .link-header a{
+        margin: 10px 0;
+    }
+    .link-header button{
+        margin: 10px 0;
+    }
+    .menu-content{
+        min-width: 100px;
+        translate: -10px 10px;
+    }
+    .menu-content a{
+        font-size: 15px;
+        padding: 5px;
     }
 }
