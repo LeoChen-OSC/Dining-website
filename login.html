@@ -6,34 +6,68 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <!--links css file with href attribute, with the html file-->
-    <title>OSC dining-login</title>
+    <title>OSC dining-home</title>
     <!-- html title -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!--sets the icon for the page title    -->
+
 </head>
 <!-- html head -->
 <body>
-    <div class="header">
-        <h1>OSC Dining</h1>
-    </div>
-    <div class="link-header">
-        <div class="dropdown">
-            <button class="toggle-menu" onclick="show()">Toggle</button>
-            <div class="menu-content" id="green">
+    <div class="main-head">
+        <div class="header">
+            <h1>Dining web</h1>
+            <ul class="header-list">
+                <li>
+                    <button onclick="redirectlogin()">Log in</button>
+                </li>
+                <li>
+                    <button onclick="redirectcart()">Cart</button> 
+                </li>
 
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="contact.html">Contact</a>
-
-            </div>
+            </ul>
+    
         </div>
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="contact.html">Contact</a>
+        <div class="link-header">
+
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+            <div class="dropdown">
+                <button class="toggle-menu" onclick="show()">More</button>
+                <div class="menu-content" id="green">
+
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="about.html">About</a>
+                    
+
+                </div>
+            </div>
+
+        </div>
     </div>
+
+    <form action="index.html" method="post" class="login-ui">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <input type="submit" value="Log In">
+    </form>
+    <div class="footer">
+        <p>&copy; 2026 restruant-name. All rights reserved.</p>
+
+    </div>
+
+ 
+
     <!--triggers the show function when clicked-->
     <script src="js/script.js"></script>
     <!--links javascript file-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 </body>
+<!-- html body , every content goes here-->
 </html>
