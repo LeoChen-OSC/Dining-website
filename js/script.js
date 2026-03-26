@@ -27,6 +27,10 @@ function redirectlogin(){
 function redirectcart(){
     window.location.href = "cart.html";
 }
+onbeforeunload = function() {
+    this.alert("Are you sure you want to leave? Your cart will be cleared.");
+}
+
 new Swiper("#swiper1",{
 //creates a new swiper using #swiper1
 
