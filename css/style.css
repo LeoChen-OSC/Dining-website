@@ -39,6 +39,15 @@
 
 
 }
+.restaurant-image{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.5;
+
+
+    /*styles the image with class "restaurant*/
+}
 .header .header-list li button:hover{
     transform: scale(1.2);
     transition: transform 0.3s ease-in-out;
