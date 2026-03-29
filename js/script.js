@@ -3,6 +3,21 @@ function show(){
     //activates the class "show" with the elemend id green
 
 }
+new Swiper("#swiper-1", {
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: false,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 window.onclick = function(event){
 //detects if the user clicks on the window and triggers the function
     if(!event.target.matches('.toggle-menu')){ //if the user clicks outside of the dropdown button
@@ -31,17 +46,3 @@ onbeforeunload = function() {
     this.alert("Are you sure you want to leave? Your cart will be cleared.");
 }
 
-new Swiper("#swiper1",{
-//creates a new swiper using #swiper1
-
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-
-});

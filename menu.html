@@ -4,36 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <!--links css file with href attribute, with the html file-->
-    <title>Menu</title>
+    <title>OSC dining-home</title>
     <!-- html title -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!--sets the icon for the page title    -->
+
 </head>
 <!-- html head -->
 <body>
-    <div class="header">
-        <h1>OSC Dining</h1>
-    </div>
-    <div class="link-header">
-        <div class="dropdown">
-            <button class="toggle-menu" onclick="show()">Toggle</button>
-            <div class="menu-content" id="green">
+    <div class="main-head">
+        <div class="header">
+            <h1>Dining web</h1>
+            <ul class="header-list">
+                <li>
+                    <button onclick="redirectlogin()">Log in</button>
+                </li>
+                <li>
+                    <button onclick="redirectcart()">Cart</button> 
+                </li>
 
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="contact.html">Contact</a>
-
-            </div>
+            </ul>
+    
         </div>
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="contact.html">Contact</a>
+        <div class="link-header">
+
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+            <div class="dropdown">
+                <button class="toggle-menu" onclick="show()">More</button>
+                <div class="menu-content" id="green">
+
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="about.html">About</a>
+                    
+
+                </div>
+            </div>
+
+        </div>
     </div>
+    <section id="swiper-1">
+        <div class="swiper" id="swiper-1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-slide-container">
+                        <img src="images/BBQ-head.jpg" alt="City 1">
+                        <div class="overlay">
+                            <h2>segment</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide-container">
+                        <img src="images/city2.jpg" alt="City 2">
+                        <div class="overlay">
+                            <h2>segment1</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide-container">
+                        <img src="images/city3.jpg" alt="City 3">
+                        <div class="overlay">
+                            <h2>segment2</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide-container">
+                        <img src="images/city4.jpg" alt="City 4">
+                        <div class="overlay">
+                            <h2>segment3</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide-container">
+                        <img src="images/city5.jpg" alt="City 5">
+                        <div class="overlay">
+                            <h2>segment4</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide-container">
+                        <img src="images/city6.jpg" alt="City 6">
+                        <div class="overlay">
+                            <h2>segment5</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            
+
+        </div>
+
+
+    </section>
+    <div class="menu-flex">
+        <div class="menu-item">
+            <img src="images/BBQ-head.jpg" alt="Menu Item 1" class="menu-image">
+            <h3>Menu Item 1</h3>
+            <p>Description of menu item 1.</p>
+        </div>
+        <div class="menu-item">
+            <img src="images/BBQ-head.jpg" alt="Menu Item 2" class="menu-image">
+            <h3>Menu Item 2</h3>
+            <p>Description of menu item 2.</p>
+        </div>
+        <div class="menu-item">
+            <img src="images/BBQ-head.jpg" alt="Menu Item 3" class="menu-image">
+            <h3>Menu Item 3</h3>
+            <p>Description of menu item 3.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2026 restruant-name. All rights reserved.</p>
+
+    </div>
+
+ 
+
     <!--triggers the show function when clicked-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     <script src="js/script.js"></script>
     <!--links javascript file-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+   
 </body>
+<!-- html body , every content goes here-->
 </html>
